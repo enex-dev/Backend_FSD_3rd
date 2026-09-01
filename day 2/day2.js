@@ -22,7 +22,7 @@ function hello3(n1,n2,callback){
     callback();
     return sum;
 }
-let a=10;
+let a=30;
 let b=20;
 
 
