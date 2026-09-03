@@ -4,9 +4,9 @@ const app=express();
 app.use(express.json());
 
 let users=[
-    {id:1, name:"Piyush", age:25},
+    {id:1, name:"Piyush", age:20},
     {id:2, name:"Pawan", age:19},
-    {id:3, name:"Purohit", age:20},
+    {id:3, name:"Purohit", age:19},
     {id:4, name:"Sahaj", age:20},
 ];
 //Get : get request to fetch all users
