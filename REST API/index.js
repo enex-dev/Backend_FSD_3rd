@@ -23,3 +23,10 @@ app.listen(3000, ()=>{
     console.log("Server is running on port 3000 http://localhost:3000");
 
 });
+//PUT: put request to update user
+app.put("/users/:id",(req,res)=>{
+    let user=users.find(u=>u.id==req.params.id);
+    user.name=req.body.name;
+    user.age=req.body.age;
+    res.json(user);
+});
