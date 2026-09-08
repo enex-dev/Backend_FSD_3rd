@@ -23,6 +23,16 @@ app.post("/products", (req, res) => {
     res.json(products);
 });
 
+app.put("/products/:id",(req, res)=>{
+    let product=products.find(p=>p.id==req.params.id);
+    product.name=req.body.name;
+    product.price=req.body.price;
+    product.stock=req.body.stock;
+    res.json(products);
+});
+
+
+
 app.listen(9000,()=>{
     console.log("Server is running on port 9000, http://localhost:9000/products");
 });
