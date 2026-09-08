@@ -30,3 +30,12 @@ app.put("/users/:id",(req,res)=>{
     user.age=req.body.age;
     res.json(user);
 });
+
+//DELETE: request to delete a user
+app.delete('/users/:id', (req, res)=>{
+    users=users.filter(u=>u.id!=req.params.id);
+    res.send("User deleted successfully")
+});
+app.listen(3000, ()=>{
+    console.log("Server is running on port 3000 http://localhost:3000");
+});
