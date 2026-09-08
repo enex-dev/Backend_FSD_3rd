@@ -17,10 +17,10 @@ app.get("/products",(req,res)=>{
     res.json(products);
 });
 
-app.post("/products",(req,res)=>{
-    const newProduct=req.body;
-    product.push(newProduct);
-
+app.post("/products", (req, res) => {
+    const newProduct = req.body;
+    products.push(newProduct);
+    res.json(products);
 });
 
 app.listen(9000,()=>{
