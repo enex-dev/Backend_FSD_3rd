@@ -17,6 +17,12 @@ app.get("/products",(req,res)=>{
     res.json(products);
 });
 
+app.post("/products",(req,res)=>{
+    const newProduct=req.body;
+    product.push(newProduct);
+
+});
+
 app.listen(9000,()=>{
     console.log("Server is running on port 9000, http://localhost:9000/products");
 });
